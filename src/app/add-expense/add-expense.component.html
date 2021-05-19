@@ -1,0 +1,31 @@
+<h1 class="add-expense">Add New Expense</h1>
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="expenseAddForm">
+        <div class="form-group">
+            <label>Expense Name</label>
+            <input type="text" formControlName = "expenseName" class="form-control"/>
+            <p *ngIf="expenseAddForm.controls.expenseName.errors">Required Field</p>
+        </div>
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" formControlName = "date" class="form-control"/>
+            <p *ngIf="expenseAddForm.controls.date.errors">Required Field</p>
+        </div>
+        <div class="form-group">
+            <label>Expense Category</label>
+            <input type="text" formControlName = "expenseCategory" class="form-control"/>
+            <p *ngIf="expenseAddForm.controls.expenseCategory.errors">Required Field</p>
+        </div>
+        <div class="form-group">
+            <label>Notes</label>
+            <input type="text" formControlName = "notes" class="form-control"/>
+            <p *ngIf="expenseAddForm.controls.notes.errors">Required Field</p>
+        </div>
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="text" formControlName = "amount" class="form-control"/>
+            <p *ngIf="expenseAddForm.controls.amount.errors">Required Field</p>
+        </div>
+        <button type="submit" [disabled]="!expenseAddForm.valid">Add</button>
+    </form>
+</div>

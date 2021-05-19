@@ -1,0 +1,49 @@
+ td,th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+ tr:nth-child(even){background-color: #f2f2f2;}
+  
+ tr:hover {background-color: #ddd;}
+  
+ th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkorchid;
+    color: white;
+    text-align: center;
+  }
+
+  h1 {
+      text-align: center;
+      color: darkorchid;
+  }
+  table {
+      text-align: center;
+      width: 100%;
+  }
+
+  .form-container{
+    text-align: center;
+    margin-top: 50px;
+    border: 2px solid violet;
+    width: 50%;
+    height: 20%;
+    padding: 10px;
+  }
+
+  .edit-btn{
+      margin-top: 20px;
+  }
+
+  .addnew-btn{ 
+    margin-top: 20px;
+   text-align:center;
+   font-size: 1.2em;
+  }
+
+  .edit-txt{
+      margin-right: 10px;
+  }

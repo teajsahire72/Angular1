@@ -1,0 +1,12 @@
+.add-expense{
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.form-container {
+    margin: auto;
+    width: 60%;
+    border: 3px solid violet;
+    padding: 10px;
+}

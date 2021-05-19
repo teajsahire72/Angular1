@@ -1,0 +1,34 @@
+<h1>Expense Details</h1>
+<table *ngIf="expenses.length > 0">
+  <tr>
+    <th>ExpenseName</th>
+    <th>Date</th>
+    <th>ExpenseCategory</th>
+    <th>Notes</th>
+    <th>Amount</th>
+    <th>Edit</th>
+  </tr>
+  <tr *ngFor="let expenseData of expenses">
+    <td>{{ expenseData.expenseName }}</td>
+    <td>{{ expenseData.date | date:'mm-dd-yyyy' }}</td>
+    <td>{{ expenseData.expenseCategory }}</td>
+    <td>{{ expenseData.notes }}</td>
+    <td>{{ expenseData.amount }}</td>
+    <td><button (click)="editAmount(expenseData)">Edit Amount</button></td>
+  </tr>
+  <tr>
+    <td colspan="4">Total Amount</td>
+    <td>{{ totalAmount }}</td>
+  </tr>
+</table>
+<div *ngIf="expenses.length == 0">
+  oops !! No expenses to show. Please add expense.
+</div>
+<div class="addnew-btn">
+  <button (click)="goToAddExpense()">Add new Expense</button>
+</div>
+<app-edit-expense
+  [selectedExpense]="selectedExpense"
+  *ngIf="showEditForm"
+  (notifyEditDone)="isEventDone($event)"
+></app-edit-expense>

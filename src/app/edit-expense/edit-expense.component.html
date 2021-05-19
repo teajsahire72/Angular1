@@ -1,0 +1,21 @@
+<div class="form-container">
+    <h3>Edit Expense Details</h3>
+    <form (ngSubmit)="onSubmit()" #editForm="ngForm" >
+        <div class="form-controls">
+          <label class="edit-txt" for="editbtn">Enter Amount</label>
+          <input
+          class="edit-txt"
+            type="number"
+            name="amount"
+            id="editbtn"
+            [(ngModel)]="selectedExpense.amount"
+            #amount="ngModel"
+          />
+        
+        <div [hidden]="amount.valid || amount.pristine">
+            Course Id is required
+          </div>
+        <button type="submit" [disabled]="!editForm.form.valid"class="edit-btn">Done</button>
+    </div>
+    </form>
+</div>
