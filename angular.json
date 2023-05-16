@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "ExpenseApp"
+  "defaultProject": "ExpenseApp",
+  "cli": {
+    "analytics": false
+  }
 }
